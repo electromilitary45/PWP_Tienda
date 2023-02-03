@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <!------------------------- INICIO HEAD -->
+    <head>
+        <title>IFRAME</title>
+        <meta charset="UTF-8">
+        <meta name="autor" content="ElectroMilitary45">
+        <meta name="description" content="INDEX SEMANA 2">
+        <meta name='keywords' content="Games, peliculas, HTML">
+        <link rel="stylesheet" href="css/estilos.css"/>
+    </head>
+    <!-- FIN HEAD -->
+
+
+
+    <!-------------------------- INICIO BODY -->
+    <body>
+        <!------------------------- INICIO HEADER -->
+        <header class="header">
+            <h1>HOME</h1>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href='ejemplo1.html'>Ejemplo 1</a>
+                <a href="ejemplo2.html">Ejemplo 2</a>
+                <a href="ejemplo3.html">Ejemplo 3</a>
+                <a href="ejemplo4.html">Ejemplo 4</a>
+                <a href="ejemplo5.html">Ejemplo 5</a>
+            </nav>
+        </header>
+        <hr>
+        <!----- FIN HEADER -->
+
+        <aside class="aside">
+            <h2 id='noticia'>Novedades de semana</h2>
+            <p>Sea of Thieves </p>
+
+        </aside>
+        <section class='contenido'>
+            <h2>Clientes</h2>
+
+            <!-- article 1 -->
+            <article>
+                <h3>Listado de Clientes</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th class="textoCentrado">ID</th>
+                            <th class="textoCentrado">Nombre</th>
+                            <th class="textoCentrado">Edad</th>
+                            <th class="textoCentrado">Salario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="textoCentrado">1</td>
+                            <td class="textoCentrado">Juan Perez Castro</td>
+                            <td class="textoDerecha">20</td>
+                            <td class="textoDerecha">350023</td>
+                        </tr>
+                        <tr>
+                            <td class="textoCentrado">2</td>
+                            <td class="textoCentrado">Derek Leiva Villalobs</td>
+                            <td class="textoDerecha">20</td>
+                            <td class="textoDerecha">₵4000000000</td>
+                        </tr>
+                        <tr>
+                            <td class="textoCentrado">3</td>
+                            <td class="textoCentrado">Sebastian Cedas Cedeño</td>
+                            <td class="textoDerecha">19</td>
+                            <td class="textoDerecha">₵6531212312</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </article>
+            <hr>
+            <br>
+            <!-- article 2 -->
+            <article>
+                <h3> Registro de Clientes</h3>
+                <form action="/cliente/insertar" method="POST">
+                    
+                    <input type="hidden" name="id" value="5" />
+                    <!-- nombre -->
+                    <fieldset>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" value="" size="10" />
+                    </fieldset>
+                    
+                    <!-- Password -->
+                    <fieldset>
+                        <label>Password</label>
+                        <input type="password" name="nombre" value="" />
+                    </fieldset>
+                    
+                    <!-- Edad -->
+                    <fieldset>
+                        <label>edad</label>
+                        <input type="number" min="18" name="edad" value="" />
+                    </fieldset>
+                    
+                    <!-- Salario -->
+                    <fieldset>
+                        <label>Salario</label>
+                        <input type="number" min="18000" name="salario" value="" required=""/>
+                    </fieldset>
+
+                    <input type="submit" value="enviarCliente" />
+                </form>
+
+            </article>
+        </section>
+
+
+
+        <!-------------------------- INICIO FOOTER -->
+        <footer class="footer">
+            ElectroShop 2023 &copy;
+        </footer>
+        <!-- FIN FOOTER -->
+    </body>
+    <!-- FIN BODY -->
+
+
+</html>
