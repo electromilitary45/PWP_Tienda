@@ -4,7 +4,6 @@ package com.Tienda.domain;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
-import org.hibernate.annotations.Table;
 
 
 //-----anotaciones
