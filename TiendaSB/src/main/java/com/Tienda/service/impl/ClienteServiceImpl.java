@@ -5,7 +5,9 @@
 package com.Tienda.service.impl;
 
 import com.Tienda.dao.ClienteDao;
+import com.Tienda.dao.CreditoDao;
 import com.Tienda.domain.Cliente;
+import com.Tienda.domain.Credito;
 import com.Tienda.service.ClienteService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,9 @@ public class ClienteServiceImpl implements ClienteService{
     //Esto crea una unica copia de un objeto
     @Autowired
     private ClienteDao clienteDao;
+    
+    @Autowired
+    private CreditoDao creditoDao;
     
     
     @Override
@@ -38,6 +43,9 @@ public class ClienteServiceImpl implements ClienteService{
 
     @Override
     public void saveCliente(Cliente cliente) {
+        Credito credito = cliente.getCredito();
+        credito=creditoDao.save(credito);
+        cliente.setCredito(credito);
         clienteDao.save(cliente);
     }
     

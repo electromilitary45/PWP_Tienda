@@ -26,6 +26,7 @@ public class ClienteController {
     public String inicio(Model model){
         var cliente= clienteService.getClientes();
         model.addAttribute("cliente",cliente);
+        model.addAttribute("totalClientes",cliente.size());
         return "/cliente/listado";
     }
     //---
