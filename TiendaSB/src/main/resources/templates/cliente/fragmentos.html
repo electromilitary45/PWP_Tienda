@@ -120,7 +120,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- 4 Fragmento que se utiliza en la página modifca.html -->
         <section th:fragment="editarCliente">
             <div class="row">
@@ -164,8 +164,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="limite">Limite de Credito</label>
-                                                    <input type="number" class="form-control" 
-                                                           name="limite" th:field="*{credito.limite}">
+                                                    <input type="number" class="form-control" name="limite" th:field="*{credito.limite}">
                                                 </div>
                                             </div>
                                         </div>
@@ -175,31 +174,32 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
-        <section th:fragment="botonesEditar">
-            <div class="container py-4 mb-4 bg-light">
-                <div class="row">
-                    <div class="col-md-4 d-grid">
-                        <a th:href="@{/cliente/listado}" class="btn btn-primary">
-                            <i class="fas fa-arrow-left"></i> Regresar
-                        </a>
-                    </div>
-                    <div class="col-md-4 d-grid">                                
-                        <a th:href="@{/cliente/eliminar/}+${cliente.idCliente}"
-                           class="btn btn-danger">
-                            <i class="fas fa-trash"></i> Eliminar
-                        </a>
-                    </div>
-                    <div class="col-md-4 d-grid">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-check"></i> Guardar
-                        </button>
-                    </div>
+    <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
+    <section th:fragment="botonesEditar">
+        <div class="container py-4 mb-4 bg-light">
+            <div class="row">
+                <div class="col-md-4 d-grid">
+                    <a th:href="@{/cliente/listado}" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Regresar
+                    </a>
+                </div>
+                <div class="col-md-4 d-grid">                                
+                    <a th:href="@{/cliente/eliminar/}+${cliente.idCliente}"
+                       class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </a>
+                </div>
+                <div class="col-md-4 d-grid">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-check"></i> Guardar
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </body>
+</body>
 </html>
