@@ -151,3 +151,33 @@ INSERT INTO techshop.venta (id_venta,id_factura,id_articulo,precio,cantidad) val
 (16,3,15,330000,1),
 (17,3,12,45000,1),
 (18,3,10,15000,3);
+create table techshop.usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  username varchar(20),
+  password varchar(200),
+PRIMARY KEY (id_usuario)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+create table techshop.rol (
+  id_rol INT NOT NULL AUTO_INCREMENT,
+  nombre varchar(20),
+  id_usuario int,
+  PRIMARY KEY (id_rol),
+  foreign key fk_rol_usuario (id_usuario) references usuario(id_usuario)
+)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_eo_0900_ai_ci;
+
+insert into techshop.usuario (id_usuario, username, password) values 
+(1,'juan','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.'),
+(2,'rebeca','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi'),
+(3,'pedro','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO');
+
+insert into techshop.rol (id_rol, nombre, id_usuario) values
+ (1,'ROLE_ADMIN',1), (2,'ROLE_VENDEDOR',1), (3,'ROLE_USER',1),
+ (4,'ROLE_VENDEDOR',2), (5,'ROLE_USER',2),
+ (6,'ROLE_USER',3);
